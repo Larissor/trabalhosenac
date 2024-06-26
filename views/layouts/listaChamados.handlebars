@@ -1,0 +1,14 @@
+<h1>Bom dia</h1>
+
+{{#each listachamados}}
+ Nome: {{dataValues.nome}} <br>
+ Setor:{{dataValues.setor}}<br>
+ Problema: {{dataValues.problema}}<br>
+ Data do registro: {{#formatdate dataValues.createdAt}} {{/formatdate}} <br>
+  <input type="text" id="comentario" name="comentario" required>
+  <!-- Exemplo de um botão para fechar um chamado -->
+<a href="/fechar-chamado/idchamados">Fechar Chamado</a>
+
+
+ <hr>
+{{/each}}

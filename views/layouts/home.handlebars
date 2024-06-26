@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chamados</title>
+    <style>
+        body {
+            font-family: Gill Sans, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+        #login-container {
+            background-color: #0272b9;
+            border: 7px solid #fcaf0f;
+            padding: 20px;
+            width: 600px;
+            box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1 {
+            color: #000000;
+            margin-left: 25%;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #000000;
+            font-family: OCR A Std, monospace;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            color: #FFF;
+            background-color: #fcaf0f;
+            border:hwb(from color h w b);
+            height: 50px;
+            line-height: 30px;
+            padding: 0 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: #004080;
+        }
+
+        #problema{
+          width: 552px;
+          padding-bottom: 10px;
+        }
+    </style>
+</head>
+<div id="background-container"></div>
+<body>
+    
+    <div id="login-container">
+    <h1>Chamados</h1>
+
+    <form action="/home" method="POST">
+        <div id="nome">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        </div>
+        <label for="problema">Descreva seu problema:</label>
+        <div id="problema">
+        <textarea style="resize:none" type="text" id="problema" name="problema" required></textarea>  
+        </div>
+        <div id="setor">
+        <label for="setor">Informe seu setor:</label>
+        <input type="text" id="setor" name="setor" required>
+        </div>
+        <button type="submit">Enviar</button>
+
+        <button onclick="redirecionarParaOutraPagina()">Registros de chamados</button>
+    </form>
+    </div>
+    <script>
+        function redirecionarParaOutraPagina() {
+            window.location.href = '/listaChamados';
+        }
+    </script>
+</body>
+</html>
